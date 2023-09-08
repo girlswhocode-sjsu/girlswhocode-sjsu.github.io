@@ -39,14 +39,108 @@ ol, ul {
 	list-style: none;
 }
 
-.navbar ul {
-	list-style-type:none;
+/* Basic styles for the navbar */
+.navbar {
+	/* color: white; */
+	position: relative;
+	top: 0;
+	right: 0; /* Position the navbar on the right side of the screen */
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	width: 100%;
+
+	/* list-style-type:none;
 	overflow:hidden;
 	position:relative;
 	margin: 0 0 0 0;
 	top: 0;
-	width: 100%
-}
+	width: 100%; */
+  }
+  
+  .navbar a {
+	color: #1A1918;
+	text-decoration: none;
+	padding: 10px;
+  }
+  
+  /* Styles for the hamburger menu */
+  .hamburger {
+	background-color: transparent;
+	color: white;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+  }
+  
+  /* Styles for the navigation links */
+  .navbar-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center; /* Center the logo vertically */
+  }
+  
+  .navbar-links li {
+	margin-right: 15px;
+  }
+  
+  /* Media query for collapsing the navbar */
+  @media screen and (max-width: 819px) {
+	.navbar-links {
+	  display: none;
+	  flex-direction: column;
+	  position: absolute;
+	  background-color: white;
+	  top: 60px; /* Height of the navbar */
+	  left: 0;
+	  padding: 10px;
+	}
+  
+	.navbar-links.active {
+	  display: flex;
+	}
+  
+	.navbar-links li {
+	  margin: 10px 0;
+	}
+  }
+
+  /* Media query to show the navbar links on larger screens */
+  @media screen and (min-width: 820px) {
+	.hamburger {
+	  display: none;
+	  color: white;
+	  border: none;
+	  font-size: 80px; /* Adjust the font size to your preference */
+	  cursor: pointer;
+	  padding: 0 2em;
+	  
+	}
+
+
+
+	.navbar-links {
+	  display: flex !important; /* Ensure that the links are always visible */
+	  
+	}
+  }
+
+
+/* .navbar ul {
+	/* list-style-type:none;
+	overflow:hidden;
+	position:relative;
+	margin: 0 0 0 0;
+	top: 0;
+	width: 100%; */
+
+
+	
+ */
 
 
 /* Style rule set for individual li */
@@ -88,11 +182,32 @@ ol, ul {
 }
 
 .section {
-    flex-basis: calc(33.33% - 20px); /* Adjust the width as needed */
-    margin: 10px;
+    /* flex-basis: calc(33.33% - 20px); Adjust the width as needed */
+    /* margin: 10px;
     padding: 20px;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+
+	width: 30%; /* Set the initial width for larger screens */
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	float: left;
+  }
+  #join{
+	margin-top: 10%;
+  }
+
+  @media (max-width: 768px) {
+	.section {
+	  width: 100%; /* Stack sections vertically for smaller screens */
+	  margin: 10px 0;
+	  float: none;
+	  
+	}
+	#join{
+		margin-top: 5%;
+	}
   }
 
 .list{

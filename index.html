@@ -10,12 +10,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<script src="script.js"></script>
 	</head>
 	<body class="is-preload">
 		<!--Navbar-->
-		<section class = "navbar">
-			<ul>
+		<nav class = "navbar">
+			<div class="navbar-toggle">
+				<button id="toggle-button" class="hamburger">&#9776;</button>
+			  </div>
+			<ul class="navbar-links"  id = "navbar-links">
 				<!-- <li><button id = "join-button">Sign Up</button></li> -->
 				<li><a href = "#footer">Contact Us</a></li>
 				<li><a href = "#four">Resources</a></li>
@@ -25,7 +29,7 @@
 				 <img class = "navbar-logo" src = "assets/css/images/logo.png">
 			</ul>
 
-		</section>
+		</nav>
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
@@ -76,9 +80,9 @@
 							</header>
 							<span class ="image fit"><iframe class = "calendar" src="https://calendar.google.com/calendar/embed?src=9mn82d4tb2qlmq89j0hdbp7ro8%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></span>
 							<ul class="actions.special">
-								<li>
+								<menu>
 								  <a href="https://calendar.google.com/calendar/u/0?cid=OW1uODJkNHRiMnFsbXE4OWowaGRicDdybzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" class="button">Add to your Calendar!</a>
-								</li>
+								</menu>
 							</ul>
 				</div>
 
@@ -199,9 +203,10 @@
 							<div class="section">
 								<h3>Join Now</h3 >
 									<a href = "https://linktr.ee/gwc_Sjsu">
-										<button style = "margin-top: 10%;">click here to join!</button>
+										<button id = "join" >click here</button>
+				
 									</a>
-							  </div>
+							  </div> 
 							<div class="section">
 								<h3>Must Reads</h3>
 								<ul class = "list" >
@@ -602,8 +607,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Girls Who Code at San Jose State University</li>
-					<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+					<li>&copy; Girls Who Code at San Jose State University</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 			</section>
 
